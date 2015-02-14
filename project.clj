@@ -2,6 +2,8 @@
   :description "A Tumblr reader"
   :url "https://github.com/yzernik/tumblur"
   :license {:name "MIT" :url "http://opensource.org/licenses/MIT"}
+  :main ^:skip-aot tumblur.web
+  :target-path "target/%s"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [compojure "1.1.8"]
                  [ring/ring-jetty-adapter "1.2.2"]
