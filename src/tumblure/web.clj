@@ -1,4 +1,4 @@
-(ns tumblur.web
+(ns tumblure.web
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
             [compojure.handler :refer [site]]
             [compojure.route :as route]

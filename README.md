@@ -1,6 +1,6 @@
-# tumblur
+# tumblure
 
-[![Build Status](https://travis-ci.org/yzernik/tumblur.svg)](https://travis-ci.org/yzernik/tumblur)
+[![Build Status](https://travis-ci.org/yzernik/tumblure.svg)](https://travis-ci.org/yzernik/tumblure)
 
 A Tumblr reader
 
@@ -12,7 +12,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar tumblur-0.1.0-standalone.jar [args]
+    $ java -jar tumblure-0.1.0-standalone.jar [args]
 
 ## Options
 

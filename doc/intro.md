@@ -1,3 +1,3 @@
-# Introduction to tumblur
+# Introduction to tumblure
 
 TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)

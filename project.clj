@@ -1,8 +1,8 @@
-(defproject tumblur "1.0.0-SNAPSHOT"
+(defproject tumblure "1.0.0-SNAPSHOT"
   :description "A Tumblr reader"
-  :url "https://github.com/yzernik/tumblur"
+  :url "https://github.com/yzernik/tumblure"
   :license {:name "MIT" :url "http://opensource.org/licenses/MIT"}
-  :main ^:skip-aot tumblur.web
+  :main ^:skip-aot tumblure.web
   :target-path "target/%s"
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [compojure "1.1.8"]
@@ -11,5 +11,5 @@
   :min-lein-version "2.0.0"
   :plugins [[environ/environ.lein "0.2.1"]]
   :hooks [environ.leiningen.hooks]
-  :uberjar-name "tumblur-standalone.jar"
+  :uberjar-name "tumblure-standalone.jar"
   :profiles {:production {:env {:production true}}})
