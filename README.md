@@ -14,6 +14,10 @@ FIXME: explanation
 
     $ java -jar tumblure-0.1.0-standalone.jar [args]
 
+## Deploy
+
+    $ git push heroku master
+
 ## Options
 
 FIXME: listing of options this app accepts.
