@@ -1,5 +1,7 @@
 # tumblur
 
+[![Build Status](https://travis-ci.org/yzernik/tumblur.svg)](https://travis-ci.org/yzernik/tumblur)
+
 A Tumblr reader
 
 ## Installation
