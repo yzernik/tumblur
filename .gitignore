@@ -12,3 +12,6 @@ pom.xml.asc
 
 # environ
 .lein-env
+
+# repl
+.nrepl-port

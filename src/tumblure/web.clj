@@ -32,7 +32,7 @@
    :roles #{::user}})
 
 (def uri-config
-  {:authentication-uri {:url "http://www.tumblr.com/oauth/authorize"
+  {:authentication-uri {:url "http://www.tumblr.com/oauth/request_token"
                         :query {:client_id (:client-id client-config)
                                 :response_type "code"
                                 :redirect_uri (format-config-uri client-config)
@@ -58,15 +58,22 @@
    :headers {"Content-Type" "text/plain"}
    :body (pr-str ["Hello" :from 'Heroku])})
 
-(defroutes app
+(defroutes app-routes
   (GET "/" []
        (splash))
+  (GET "/authlink" request
+       (friend/authorize #{::oauth2-user} "Authorized page."))
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
 
+(def app
+  (-> app-routes
+      (friend/authenticate friend-config)
+      site))
+
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 5000))]
-    (jetty/run-jetty (site #'app) {:port port :join? false})))
+    (jetty/run-jetty app {:port port :join? false})))
 
 ;; For interactive development:
 ;; (.stop server)
